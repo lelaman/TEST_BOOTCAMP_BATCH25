@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Segitiga Pascal - 03</title>
+  <!-- CSS only -->
+  <link rel="stylesheet" href="../styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <!-- JavaScript Bundle with Popper -->
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../index.html">Nurlela Manalu</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Test_bootcamp
+            
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<script language= "JavaScript">
+function hitung()
+
+{
+  var saldo=parseFloat(document.lela.isaldo.value);
+  var bunga=parseFloat(document.lela.ibunga.value)/100;
+  var waktu=parseFloat(document.lela.iwaktu.value);
+
+  var hasil="";
+
+  for(i=1;i<=waktu;i++)
+    {
+      saldo=saldo+(saldo*bunga);
+      hasil=hasil+"Saldo Bulan "+i+"= Rp. "+saldo+"\n";
+    }
+
+
+  document.lela.ohasil.value=hasil;
+
+}
+</script>
+<form name="lela">
+
+<h2><center>PERHITUNGAN BUNGA</center></h2>
+</br>
+<br>
+<pre>
+   Data Input :
+Saldo  :       <input type="text"  class="custom-input" name="isaldo">
+Bunga  :     <input type="text"  class="custom-input"  name="ibunga"> %
+Waktu  :     <input type="text"  class="custom-input" name="iwaktu"> Bulan
+</pre>
+<hr>
+<button type="button" value="Hitung" class="btn-primary" onclick="hitung()"> Hitung </button>
+<button  type="reset" class="btn-primary" value="Reset">  Reset</button>
+<pre>
+Hasil Perhitungan      :
+<textarea name="ohasil" rows="15" cols="70">Hasil Bunga  akan muncul Disni </textarea>
+</pre>
+</form>
+</body>
+</html>
